@@ -42,11 +42,7 @@
 
     function normalize(text) {
       text = text.trim().toLowerCase();
-      let stopWords = [
-        "what","what's","how","how's","who","who's","where","where's",
-        "when","when's","why","does","do","is","are","the","your","of",
-        "can","could","would","will","shall","should","did","if","tell","me","about","explain"
-      ];
+      let stopWords = ["the","your","of","can","could","would","will","shall","should","did", "if","tell","me","about","explain","please","show","give","list","any","some","like", "for","to","on","in","at","with","from","as","i","my","our","his","her","its","their", "and","or","but","so","then","too","very","just","also","ok","okay","well","now","us","doing","been","being","am","be"];
       for (let w of stopWords) {
         if (text.startsWith(w + " ")) {
           text = text.replace(w, "").trim();
